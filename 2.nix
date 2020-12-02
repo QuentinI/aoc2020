@@ -9,7 +9,7 @@ let
       countChar (builtins.substring 1 maxInt string) char;
   parseRecord = record:
     let
-      fields = builtins.match "([[:digit:]]+)-([[:xdigit:]]+) ([[:alpha:]]): ([[:alpha:]]+)" record;
+      fields = builtins.match "([[:digit:]]+)-([[:digit:]]+) ([[:alpha:]]): ([[:alpha:]]+)" record;
     in
       if fields == null then
        null
